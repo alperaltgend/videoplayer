@@ -19,6 +19,8 @@ class _VideoPlayerState extends State<VideoPlayer> {
   @override
   void initState() {
     super.initState();
+
+    //codigo para reproducir un video local
     /*
     _videoPlayerController = CachedVideoPlayerController.asset("assets/video.mp4",)
     ..initialize().then((value) => setState(() {}));
@@ -27,6 +29,8 @@ class _VideoPlayerState extends State<VideoPlayer> {
       videoPlayerController: _videoPlayerController,
     );
     */
+
+    //codigo para reproducir video con link
     _videoPlayerController = CachedVideoPlayerController.network(longVideo)
     ..initialize().then((value) => setState(() {}));
     _customVideoPlayerController = CustomVideoPlayerController(
